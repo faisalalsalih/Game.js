@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+        .choices{
+            margin-bottom: 30px;
+        }
+        .choices button{
+            font-size: 7.5rem;
+            min-width: 160px;
+            margin: 0 15px;
+            border-radius: 50%;
+            background-color: rgb(5, 117, 117);
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+        .choices button:hover{
+            background-color: rgb(2, 82, 157);
+        }
+        #playerdisplay, #computerdisplay{
+            font-size: 2.5rem;
+        }
+        #resultdisplay{
+            font-size: 5.0rem;
+            margin: 30px 0;
+        }
+        .scoredisplay{
+            font-size: 2.5rem;
+        }
+        .greentext, #psd{
+            color: rgb(9, 218, 30);
+        }
+        .redtext, #csd{
+            color: rgb(228, 35, 35);
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock - Paper - scissors</h1>
+    <div class="choices">
+        <button onclick="playGame('rock')">🥊</button>
+        <button onclick="playGame('paper')">📃</button>
+        <button onclick="playGame('scissors')">✂️</button>
+    </div>
+    <div id="playerdisplay">Player:</div>
+    <div id="computerdisplay">Computer:</div>
+    <div id="resultdisplay"></div>
+
+    <div class="scoredisplay">Player Score:<span id="psd">0</span></div>
+    <div class="scoredisplay">Computer Score:<span id="csd">0</span></div>
+    <script src="index.js"></script>
+</body>
+</html>
